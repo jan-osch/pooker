@@ -1,8 +1,12 @@
 # Poker Simulator
-Kod napisany w marcu 2013
+
 
 ## Uruchomienie
-python2 test.py 
+`python2 main.py`
+
+Można pozmieniać parametry, np ilość playerów, imiona.
+W pliku game w klasie player jest napisana naiwna strategia dla 'botów'.
+
 
 ## Objaśnienia
 
@@ -14,4 +18,5 @@ Karty są oznaczone w następujący sposób
 * `JC` - oznacza waleta karo 
 * `DT` - oznacza damę trefl
  
- 
+# Powstało
+Marzec 2013

@@ -1,0 +1,9 @@
+import cards
+
+renka = []
+deck = cards.deck()
+for a in range(7):
+      renka.append(deck.deal())
+
+print renka
+print cards.findhands(renka)

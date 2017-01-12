@@ -1,11 +1,7 @@
-import cards
-import random
 import game
-import math
 import player
 
 jasiek = player.userPlayer('Jasiek')
-ulcia = player.userPlayer('Ulcia')
 
 robercik = game.player('robercik')
 
@@ -17,6 +13,7 @@ joka =  game.player('joka')
 
 peja = game.player('peja')
 
-L = [robercik,ania,berta,joka,peja]
-t = game.table(L,3000,5)
+lis_of_players = [robercik, ania, berta, joka, peja, jasiek]
+
+t = game.table(lis_of_players, 3000, 10)
 t.play()

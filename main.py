@@ -1,19 +1,20 @@
-import game
-import player
+from game import Game
+from bot_player import BotPlayer
+from user_player import UserPlayer
 
-jasiek = player.userPlayer('Jasiek')
+jasiek = UserPlayer('Jasiek')
 
-robercik = game.player('robercik')
+robercik = BotPlayer('robercik')
 
-ania = game.player('ania')
+ania = BotPlayer('ania')
 
-berta = game.player('berta')
+berta = BotPlayer('berta')
 
-joka =  game.player('joka')
+joka = BotPlayer('joka')
 
-peja = game.player('peja')
+peja = BotPlayer('peja')
 
-lis_of_players = [robercik, ania, berta, joka, peja, jasiek]
+lis_of_players = [robercik, ania, berta, joka, peja]
 
-t = game.table(lis_of_players, 3000, 10)
+t = Game(lis_of_players, 3000, 10)
 t.play()

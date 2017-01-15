@@ -5,7 +5,6 @@ import cards
 # ===============================================================================
 debug_breaks = False
 
-
 class Round:
     def __init__(self, players, blinds):
         # BLINDS
@@ -32,8 +31,7 @@ class Round:
 
         # POT / BETS
         self.pot = 0
-        self.bets = {}
-        self.bets['best'] = 0
+        self.bets = {'best': 0}
         # bets will be used to store players bets
 
         # WINNERS
@@ -260,8 +258,8 @@ class Round:
     # ===========================================================================
     # #KEY BREAKS
     # ===========================================================================
-    def keyBreak(self):
-        if debug_breaks == True:
+    def debug_break(self):
+        if debug_breaks:
             print
             raw_input('      ***press any key to continiue***     ')
 
@@ -327,7 +325,7 @@ class Round:
         # skip if there is only one player left
         if skip != True:
 
-            self.keyBreak()
+            self.debug_break()
 
             # =======================================================================
             # #flop
@@ -377,7 +375,7 @@ class Round:
             # #turn
             # =======================================================================
 
-            self.keyBreak()
+            self.debug_break()
 
             print '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
             print 'Turn: '
@@ -424,7 +422,7 @@ class Round:
             # #river
             # =======================================================================
 
-            self.keyBreak()
+            self.debug_break()
 
             print '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
             print 'River: '
@@ -468,7 +466,7 @@ class Round:
         # #END
         # =======================================================================
 
-        self.keyBreak()
+        self.debug_break()
 
         print '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
         print 'Round Evaluation: '
@@ -547,7 +545,7 @@ class Round:
                 else:
                     print 'Remis: %s gets %s chips' % (winner.getName(), wygrana)
 
-        self.keyBreak()
+        self.debug_break()
 
         print
         print '##########################################################################'
